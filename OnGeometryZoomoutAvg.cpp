@@ -48,25 +48,6 @@ void CImageProc학번2017View::OnGeometryZoomoutAvg()
 					}
 				pDoc->gResultImg[y / yscale][x / xscale] = sum / (xscale*yscale);
 			}
-			else
-			{
-				rsum = 0;	gsum = 0;	bsum = 0;
-				for (j = 0; j < yscale; j++)
-					for (i = 0; i < xscale; i++)
-					{
-						src_x = x + i;
-						src_y = y + j;
-						if (src_x > pDoc->imageWidth - 1) src_x = pDoc->imageWidth - 1;
-						if (src_y > pDoc->imageHeight - 1) src_y = pDoc->imageHeight - 1;
-
-						rsum += pDoc->inputImg[src_y][3 * src_x + 0];
-						gsum += pDoc->inputImg[src_y][3 * src_x + 1];
-						bsum += pDoc->inputImg[src_y][3 * src_x + 2];
-					}
-				pDoc->gResultImg[y / yscale][3 * (x / xscale) + 0] = rsum / (xscale*yscale);
-				pDoc->gResultImg[y / yscale][3 * (x / xscale) + 1] = gsum / (xscale*yscale);
-				pDoc->gResultImg[y / yscale][3 * (x / xscale) + 2] = bsum / (xscale*yscale);
-			}
 		}
 	Invalidate();
 
