@@ -50,5 +50,4 @@ void CImageProc학번2017View::OnGeometryZoomoutAvg()
 			}
 		}
 	Invalidate();
-
 }
