@@ -1,8 +1,8 @@
 void CImageProc학번2017View::OnGeometryZoomoutAvg()
 {
-	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-	CImageProc학번2017Doc* pDoc = GetDocument();
-	ASSERT_VALID(pDoc);
+    // TODO: 여기에 명령 처리기 코드를 추가합니다.
+    CImageProc학번2017Doc* pDoc = GetDocument();
+    ASSERT_VALID(pDoc);
 
 	int x, y, i, j;
 	int sum, rsum, gsum, bsum;
