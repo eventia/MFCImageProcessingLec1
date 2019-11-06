@@ -3,22 +3,22 @@
 
 void CImageProc학번2017View::OnGeometryRotate()
 {
-	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-	CImageProc학번2017Doc* pDoc = GetDocument();
+    // TODO: 여기에 명령 처리기 코드를 추가합니다.
+    CImageProc학번2017Doc* pDoc = GetDocument();
 
-	int i, x, y;
-	int angle = 30;	// degree
-	float radian;
-	int Cx, Cy, Oy;
-	int x_source, y_source;
-	int xdiff, ydiff;
+    int i, x, y;
+    int angle = 30;	// degree
+    float radian;
+    int Cx, Cy, Oy;
+    int x_source, y_source;
+    int xdiff, ydiff;
 
-	if (pDoc->gResultImg != NULL)
-	{
-		for (i = 0; i < pDoc->gImageHeight; i++)
-			free(pDoc->gResultImg[i]);
-		free(pDoc->gResultImg);
-	}
+    if (pDoc->gResultImg != NULL)
+    {
+        for (i = 0; i < pDoc->gImageHeight; i++)
+            free(pDoc->gResultImg[i]);
+        free(pDoc->gResultImg);
+    }
 
 	radian = 2 * PI / 360 * angle;
 	pDoc->gImageWidth = pDoc->imageHeight*fabs(cos(PI / 2 - radian)) + pDoc->imageWidth*fabs(cos(radian));
