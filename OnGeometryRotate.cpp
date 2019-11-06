@@ -52,18 +52,6 @@ void CImageProc학번2017View::OnGeometryRotate()
 				else
 					pDoc->gResultImg[y + ydiff][x + xdiff] = pDoc->inputImg[y_source][x_source];
 			}
-			else
-			{
-				if (x_source<0 || x_source>pDoc->imageWidth - 1 ||
-					y_source<0 || y_source>pDoc->imageHeight - 1)
-				{
-					pDoc->gResultImg[y + ydiff][3 * (x + xdiff) + 0] = 255;
-					pDoc->gResultImg[y + ydiff][3 * (x + xdiff) + 1] = 255;
-					pDoc->gResultImg[y + ydiff][3 * (x + xdiff) + 2] = 255;
-				}
-
-			}
 		}
-
 	Invalidate();
 }
