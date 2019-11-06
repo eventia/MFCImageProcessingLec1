@@ -35,13 +35,6 @@ void CImageProc학번2017View::OnGeometryZoomoutSubsampling()
 		{
 			if (pDoc->depth == 1)
 				pDoc->gResultImg[y][x] = pDoc->inputImg[y*yscale][x*xscale];
-			else
-			{
-				pDoc->gResultImg[y][3 * x + 0] = pDoc->inputImg[y*yscale][3 * (x*xscale) + 0];
-				pDoc->gResultImg[y][3 * x + 1] = pDoc->inputImg[y*yscale][3 * (x*xscale) + 1];
-				pDoc->gResultImg[y][3 * x + 2] = pDoc->inputImg[y*yscale][3 * (x*xscale) + 2];
-			}
 		}
 	Invalidate();
-
 }
