@@ -37,7 +37,7 @@ void CImageProc학번2017View::OnGeometryZoominInterpolation()
     for (y = 0; y < pDoc->gImageHeight; y++)
         for (x = 0; x < pDoc->gImageWidth; x++)
         {
-            src_x = x / xscale;
+            src_x = x / xscale;   // (if scale:3)  x=0 1 2 3 / 3.0 -> [.0 .3 .7 ][ 1.0 1.3 1.7 ]
             src_y = y / yscale;
 
             alpha = src_x - (int)src_x;
